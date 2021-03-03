@@ -14,8 +14,10 @@ done
 # iterate over subdirectories
 for dir in *
 do
-  cd "${dir}" || return
-  if [ -d .git ]; then
+  if [[ -d ${dir} ]]; then
+    cd "${dir}" || exit
+  fi
+  if [[ -d .git ]]; then
     git status -s
   fi
   cd ..
@@ -23,3 +25,4 @@ done
 
 # ending
 echo "Completed in ${SECONDS}s"
+

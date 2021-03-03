@@ -19,4 +19,5 @@ rm -rf **/package-lock.json
 rm -rf **/hugo.log
 
 # ending
-echo "Cleanup completed in ${SECONDS}s"
+echo "Completed in ${SECONDS}s"
+

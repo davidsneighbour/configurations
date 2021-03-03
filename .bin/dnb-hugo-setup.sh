@@ -13,10 +13,22 @@ arrayName=(
 for i in "${arrayName[@]}"; do
   [ ! -d "$1" ] && git clone git@github.com:dnb-hugo/"${1}".git
   cd "$i" || return
-  git pull
-  git update
+  if [ -d .git ]; then
+    touch .autostash
+    git stash
+    git pull
+    git update
+    git stash apply
+    rm .autostash
+  fi
+  npm-check-updates -u
+  npm install
   if [ -f package.json ]; then
     npm install
   fi
   cd ..
 done
+
+# ending
+echo "Completed in ${SECONDS}s"
+
