@@ -22,7 +22,7 @@ for i in "${arrayName[@]}"; do
     rm .autostash
   fi
   npm-check-updates -u
-  npm install
+  fixpack
   if [ -f package.json ]; then
     npm install
   fi
@@ -31,4 +31,3 @@ done
 
 # ending
 echo "Completed in ${SECONDS}s"
-

@@ -1,0 +1,28 @@
+{
+  "commitlint": {
+    "extends": [
+      "@dnb-hugo/commitlint-config"
+    ]
+  },
+  "devDependencies": {
+    "@dnb-hugo/commitlint-config": "2.0.4",
+    "@dnb-hugo/eslint-config": "2.0.2",
+    "@dnb-hugo/remark-config": "2.0.2",
+    "@dnb-hugo/standard-version-config": "2.0.1",
+    "@dnb-hugo/stylelint-config": "2.0.12",
+    "@dnb-hugo/textlint-config": "2.0.1",
+    "standard-version": "9.1.1"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6"
+  },
+  "scripts": {
+    "commitlint": "commitlint --from=HEAD~1",
+    "release": "standard-version --release-as patch -a -t \"v\" && ./bin/release-hook-postrelease.sh",
+    "release-major": "standard-version --release-as major -a -t \"v\" && ./bin/release-hook-postrelease.sh",
+    "release-next": "standard-version --release-as minor -a -t \"v\" && ./bin/release-hook-postrelease.sh",
+    "textlint": "textlint",
+    "textlint-fix": "textlint --fix"
+  }
+}
