@@ -21,9 +21,9 @@ for i in "${arrayName[@]}"; do
     git stash apply
     rm .autostash
   fi
-  npm-check-updates -u
-  fixpack
   if [ -f package.json ]; then
+    npm-check-updates -u
+    fixpack
     npm install
   fi
   cd ..
