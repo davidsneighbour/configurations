@@ -9,7 +9,7 @@
   "homepage": "https://github.com/davidsneighbour/configurations/tree/main/packages/htmlvalidate-config",
   "dependencies": {
     "axe-core": "4.10.0",
-    "html-validate": "8.24.1"
+    "html-validate": "8.24.2"
   },
   "scripts": {
     "fixpack": "fixpack",
