@@ -8,7 +8,7 @@
   "bugs": "https://github.com/davidsneighbour/configurations/issues",
   "homepage": "https://github.com/davidsneighbour/configurations/tree/main/packages/cypress-config",
   "dependencies": {
-    "cypress": "13.15.0",
+    "cypress": "13.15.1",
     "cypress-axe": "1.5.0",
     "eslint-plugin-cypress": "4.0.0"
   },
