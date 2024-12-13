@@ -8,7 +8,7 @@
   "bugs": "https://github.com/davidsneighbour/configurations/issues",
   "homepage": "https://github.com/davidsneighbour/configurations/tree/main/packages/browserslist-config",
   "dependencies": {
-    "browserslist": "4.24.2"
+    "browserslist": "4.24.3"
   },
   "scripts": {
     "fixpack": "fixpack",
