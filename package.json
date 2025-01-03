@@ -26,7 +26,7 @@
     "@davidsneighbour/stylelint-config": "file:./packages/stylelint-config",
     "@davidsneighbour/tools": "file:./packages/tools",
     "@davidsneighbour/webpack-config": "file:./packages/webpack-config",
-    "@types/node": "22.10.2",
+    "@types/node": "22.10.4",
     "lerna": "8.1.9"
   },
   "scripts": {
