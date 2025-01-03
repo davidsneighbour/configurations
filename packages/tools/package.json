@@ -19,7 +19,7 @@
     "lockfile-lint": "4.14.0",
     "ncp": "2.0.0",
     "node-fetch": "3.3.2",
-    "npm-check-updates": "17.1.12",
+    "npm-check-updates": "17.1.13",
     "npm-package-json-lint": "8.0.0",
     "npm-run-all2": "7.0.2",
     "npm-watch": "0.13.0",
