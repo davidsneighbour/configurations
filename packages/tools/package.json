@@ -9,7 +9,7 @@
   "homepage": "https://github.com/davidsneighbour/configurations/tree/main/packages/tools",
   "type": "module",
   "dependencies": {
-    "@j9t/obsohtml": "1.7.0",
+    "@j9t/obsohtml": "1.8.0",
     "@secretlint/secretlint-rule-no-dotenv": "9.0.0",
     "@secretlint/secretlint-rule-no-homedir": "9.0.0",
     "@secretlint/secretlint-rule-no-k8s-kind-secret": "9.0.0",

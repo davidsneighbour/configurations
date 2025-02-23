@@ -4,6 +4,10 @@ export default [
   {
     files: ['**/*.css'],
     language: 'css/css',
+    languageOptions: {
+      customSyntax: tailwindSyntax,
+      tolerant: true,
+    },
     plugins: {
       css,
     },
