@@ -86,7 +86,8 @@
   },
   "scripts": {
     "fixpack": "fixpack",
-    "update": "npm-check-updates -u && npm install && git add package* && fixpack && git commit -m \"chore(deps): update dependencies\""
+    "update": "npm-check-updates -u && npm install && git add package* && fixpack && git commit -m \"chore(deps): update dependencies\"",
+    "postinstall": "node ./confirm-install.mjs"
   },
   "main": "index.js",
   "engines": {
