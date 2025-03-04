@@ -5,6 +5,5 @@
   "interactive": false,
   "upgrade": true,
   "root": true,
-  "deep": true,
-  //"workspaces": true
+  "deep": true
 }
