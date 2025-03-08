@@ -7,8 +7,10 @@ import jsonConfig from './configs/json.js'
 import markdownConfig from './configs/markdown.js'
 import pluginSecurity from 'eslint-plugin-security'
 import stylisticJs from '@stylistic/eslint-plugin'
+import { globalIgnores } from "eslint/config";
 
 export default [
+  globalIgnores(["dist", "build"]),
   eslint.configs.all,
   pluginSecurity.configs.recommended,
   stylisticJs.configs.customize({
