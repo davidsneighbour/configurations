@@ -11,7 +11,7 @@
   "dependencies": {
     "@davidsneighbour/browserslist-config": "^2025.1.1",
     "@fullhuman/postcss-purgecss": "7.0.2",
-    "autoprefixer": "10.4.20",
+    "autoprefixer": "10.4.21",
     "cssnano": "7.0.6",
     "doiuse": "6.0.5",
     "pixrem": "5.0.0",
