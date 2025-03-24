@@ -3,6 +3,7 @@
 import cssConfig from './configs/css.js'
 import defaultConfig from './configs/default.js'
 import eslint from '@eslint/js'
+import tslint from './configs/tslint.js'
 import jsonConfig from './configs/json.js'
 import markdownConfig from './configs/markdown.js'
 import pluginSecurity from 'eslint-plugin-security'
@@ -12,6 +13,7 @@ import { globalIgnores } from "eslint/config";
 export default [
   globalIgnores(["dist", "build"]),
   eslint.configs.all,
+  tslint,
   pluginSecurity.configs.recommended,
   stylisticJs.configs.customize({
     indent: 2,
