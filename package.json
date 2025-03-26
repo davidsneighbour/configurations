@@ -10,7 +10,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "@typescript-eslint/parser": "^8.27.0"
+    "@typescript-eslint/parser": "^8.28.0"
   },
   "devDependencies": {
     "@davidsneighbour/babel-config": "file:./packages/babel-config",
@@ -30,7 +30,7 @@
     "@davidsneighbour/stylelint-config": "file:./packages/stylelint-config",
     "@davidsneighbour/tools": "file:./packages/tools",
     "@davidsneighbour/webpack-config": "file:./packages/webpack-config",
-    "@types/node": "22.13.12",
+    "@types/node": "22.13.13",
     "lerna": "8.2.1"
   },
   "scripts": {
