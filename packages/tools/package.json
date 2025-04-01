@@ -14,7 +14,7 @@
     "@secretlint/secretlint-rule-no-dotenv": "9.2.0",
     "@secretlint/secretlint-rule-no-homedir": "9.2.0",
     "@secretlint/secretlint-rule-no-k8s-kind-secret": "9.2.0",
-    "@secretlint/secretlint-rule-openai": "9.2.0",
+    "@secretlint/secretlint-rule-openai": "9.3.0",
     "@secretlint/secretlint-rule-pattern": "9.2.0",
     "@secretlint/secretlint-rule-preset-recommend": "9.2.0",
     "@secretlint/secretlint-rule-secp256k1-privatekey": "9.2.0",
