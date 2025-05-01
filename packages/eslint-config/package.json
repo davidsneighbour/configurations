@@ -9,7 +9,7 @@
   "homepage": "https://github.com/davidsneighbour/configurations/tree/main/packages/eslint-config",
   "type": "module",
   "dependencies": {
-    "@eslint/css": "0.6.0",
+    "@eslint/css": "0.7.0",
     "@eslint/js": "9.24.0",
     "@eslint/json": "0.11.0",
     "@eslint/markdown": "6.3.0",
