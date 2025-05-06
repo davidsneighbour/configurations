@@ -1,7 +1,7 @@
 {
   "name": "@davidsneighbour/commitlint-config",
   "description": "Commitlint configuration for davidsneighbour projects.",
-  "version": "2025.1.1",
+  "version": "2025.1.2",
   "license": "MIT",
   "repository": "davidsneighbour/configurations",
   "author": "Patrick Kollitsch <83281+davidsneighbour@users.noreply.github.com> (https://davids-neighbour.com)",
