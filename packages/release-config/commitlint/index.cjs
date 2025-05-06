@@ -1,5 +1,5 @@
 /** @type {import('cz-git').UserConfig} */
-export default {
+module.exports = {
   rules: {
     // @see: https://commitlint.js.org/#/reference-rules
   },

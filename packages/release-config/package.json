@@ -14,7 +14,7 @@
   },
   "exports": {
     ".": "./index.js",
-    "./commitlint": "./commitlint/index.js"
+    "./commitlint": "./commitlint/index.cjs"
   },
   "scripts": {
     "fixpack": "fixpack",
