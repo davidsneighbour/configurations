@@ -4,7 +4,7 @@
   "version": "2025.1.1",
   "license": "MIT",
   "repository": "davidsneighbour/configurations",
-  "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
+  "author": "Patrick Kollitsch <83281+davidsneighbour@users.noreply.github.com> (https://davids-neighbour.com)",
   "bugs": "https://github.com/davidsneighbour/configurations/issues",
   "homepage": "https://github.com/davidsneighbour/configurations/tree/main/packages/remark-config",
   "keywords": [
@@ -26,7 +26,7 @@
     "remark-lint-definition-case": "4.0.1",
     "remark-lint-definition-spacing": "4.0.1",
     "remark-lint-emphasis-marker": "4.0.1",
-    "remark-lint-fenced-code-flag": "4.1.1",
+    "remark-lint-fenced-code-flag": "4.2.0",
     "remark-lint-fenced-code-marker": "4.0.1",
     "remark-lint-file-extension": "3.0.1",
     "remark-lint-final-definition": "4.0.2",
@@ -70,8 +70,8 @@
     "remark-lint-no-shortcut-reference-link": "4.0.1",
     "remark-lint-no-table-indentation": "5.0.1",
     "remark-lint-no-tabs": "4.0.1",
-    "remark-lint-no-undefined-references": "5.0.1",
-    "remark-lint-no-unused-definitions": "4.0.1",
+    "remark-lint-no-undefined-references": "5.0.2",
+    "remark-lint-no-unused-definitions": "4.0.2",
     "remark-lint-ordered-list-marker-style": "4.0.1",
     "remark-lint-rule-style": "4.0.1",
     "remark-lint-strong-marker": "4.0.1",
@@ -82,7 +82,7 @@
     "unified": "11.0.5"
   },
   "devDependencies": {
-    "@apidevtools/json-schema-ref-parser": "^11.9.3"
+    "@apidevtools/json-schema-ref-parser": "^12.0.1"
   },
   "scripts": {
     "fixpack": "fixpack",

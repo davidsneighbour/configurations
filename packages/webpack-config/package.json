@@ -4,7 +4,7 @@
   "version": "2025.1.1",
   "license": "MIT",
   "repository": "davidsneighbour/configurations",
-  "author": "Patrick Kollitsch <patrick@davids-neighbour.com> (https://davids-neighbour.com)",
+  "author": "Patrick Kollitsch <83281+davidsneighbour@users.noreply.github.com> (https://davids-neighbour.com)",
   "bugs": "https://github.com/davidsneighbour/configurations/issues",
   "homepage": "https://github.com/davidsneighbour/configurations/tree/main/packages/webpack-config",
   "type": "module",
@@ -18,7 +18,7 @@
     "terser-webpack-plugin": "5.3.14",
     "ts-loader": "9.5.2",
     "typescript": "5.8.3",
-    "webpack": "5.99.2",
+    "webpack": "5.99.7",
     "webpack-cli": "6.0.1",
     "webpack-merge": "6.0.1"
   },
