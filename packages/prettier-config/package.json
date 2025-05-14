@@ -4,19 +4,19 @@
   "version": "2025.1.5",
   "license": "MIT",
   "repository": "davidsneighbour/configurations",
-  "author": "Patrick Kollitsch <83281+davidsneighbour@users.noreply.github.com> (https://davids-neighbour.com)",
+  "author": "Patrick Kollitsch <davidsneighbourdev+gh@gmail.com> (https://davids-neighbour.com)",
   "bugs": "https://github.com/davidsneighbour/configurations/issues",
   "homepage": "https://github.com/davidsneighbour/configurations/tree/main/packages/prettier-config",
   "dependencies": {
     "@prettier/plugin-php": "0.22.4",
     "@prettier/plugin-xml": "3.4.1",
     "prettier": "3.5.3",
-    "prettier-eslint": "^16.4.1",
+    "prettier-eslint": "^16.4.2",
     "prettier-plugin-go-template": "0.0.15",
     "prettier-plugin-properties": "0.3.0",
-    "prettier-plugin-sh": "0.17.2",
+    "prettier-plugin-sh": "0.17.4",
     "prettier-plugin-tailwindcss": "0.6.11",
-    "prettier-plugin-toml": "2.0.4"
+    "prettier-plugin-toml": "2.0.5"
   },
   "scripts": {
     "fixpack": "fixpack",

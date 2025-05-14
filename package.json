@@ -2,7 +2,7 @@
   "name": "root",
   "version": "0.0.0",
   "private": true,
-  "author": "Patrick Kollitsch <83281+davidsneighbour@users.noreply.github.com> (https://davids-neighbour.com)",
+  "author": "Patrick Kollitsch <davidsneighbourdev+gh@gmail.com> (https://davids-neighbour.com)",
   "bugs": "https://github.com/davidsneighbour/configurations/issues",
   "homepage": "https://github.com/davidsneighbour/configurations/",
   "type": "module",
@@ -10,7 +10,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "@typescript-eslint/parser": "^8.32.0"
+    "@typescript-eslint/parser": "^8.32.1"
   },
   "devDependencies": {
     "@davidsneighbour/babel-config": "file:./packages/babel-config",
@@ -30,7 +30,7 @@
     "@davidsneighbour/stylelint-config": "file:./packages/stylelint-config",
     "@davidsneighbour/tools": "file:./packages/tools",
     "@davidsneighbour/webpack-config": "file:./packages/webpack-config",
-    "@types/node": "22.15.12",
+    "@types/node": "22.15.18",
     "lerna": "8.2.2"
   },
   "scripts": {

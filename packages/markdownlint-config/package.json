@@ -4,12 +4,12 @@
   "version": "2025.1.5",
   "license": "MIT",
   "repository": "davidsneighbour/configurations",
-  "author": "Patrick Kollitsch <83281+davidsneighbour@users.noreply.github.com> (https://davids-neighbour.com)",
+  "author": "Patrick Kollitsch <davidsneighbourdev+gh@gmail.com> (https://davids-neighbour.com)",
   "bugs": "https://github.com/davidsneighbour/configurations/issues",
   "homepage": "https://github.com/davidsneighbour/configurations/tree/main/packages/markdownlint-config",
   "dependencies": {
     "markdownlint": "0.38.0",
-    "markdownlint-cli2": "0.17.2"
+    "markdownlint-cli2": "0.18.0"
   },
   "scripts": {
     "fixpack": "fixpack",
