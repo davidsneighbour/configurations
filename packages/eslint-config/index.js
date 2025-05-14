@@ -3,6 +3,7 @@
 import cssConfig from './configs/css.js'
 import defaultConfig from './configs/default.js'
 import eslint from '@eslint/js'
+import htmlLint from './configs/html.js'
 import tslint from './configs/tslint.js'
 import jsonConfig from './configs/json.js'
 import markdownConfig from './configs/markdown.js'
@@ -29,4 +30,5 @@ export default [
   ...markdownConfig,
   ...jsonConfig,
   ...cssConfig,
+  ...htmlLint,
 ]
