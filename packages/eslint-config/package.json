@@ -18,7 +18,6 @@
     "@stylistic/eslint-plugin-js": "4.2.0",
     "@typescript-eslint/parser": "^8.32.1",
     "eslint": "9.26.0",
-    "eslint-config-standard": "17.1.0",
     "eslint-plugin-security": "3.0.1"
   },
   "devDependencies": {
