@@ -32,7 +32,7 @@
     "remark-lint-final-definition": "4.0.2",
     "remark-lint-final-newline": "3.0.1",
     "remark-lint-first-heading-level": "4.0.1",
-    "remark-lint-frontmatter-schema": "^3.15.4",
+    "remark-lint-frontmatter-schema": "davidsneighbour/remark-lint-frontmatter-schema",
     "remark-lint-hard-break-spaces": "4.1.1",
     "remark-lint-heading-increment": "4.0.1",
     "remark-lint-heading-style": "4.0.1",
@@ -78,16 +78,12 @@
     "remark-lint-table-cell-padding": "5.1.1",
     "remark-lint-table-pipe-alignment": "4.1.1",
     "remark-lint-table-pipes": "5.0.1",
-    "remark-lint-unordered-list-marker-style": "4.0.1",
-    "unified": "11.0.5"
-  },
-  "devDependencies": {
-    "@apidevtools/json-schema-ref-parser": "^12.0.2"
+    "remark-lint-unordered-list-marker-style": "4.0.1"
   },
   "scripts": {
     "fixpack": "fixpack",
-    "update": "npm-check-updates -u && npm install && git add package* && fixpack && git commit -m \"chore(deps): update dependencies\"",
-    "postinstall": "node ./confirm-install.mjs"
+    "postinstall": "node ./confirm-install.mjs",
+    "update": "npm-check-updates -u && npm install && git add package* && fixpack && git commit -m \"chore(deps): update dependencies\""
   },
   "main": "index.js",
   "engines": {
