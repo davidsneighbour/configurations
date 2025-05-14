@@ -1,7 +1,7 @@
 {
   "name": "@davidsneighbour/eslint-config",
   "description": "ESlint configuration for use in davidsneighbour projects.",
-  "version": "2025.1.5",
+  "version": "2025.2.0",
   "license": "MIT",
   "repository": "davidsneighbour/configurations",
   "author": "Patrick Kollitsch <davidsneighbourdev+gh@gmail.com> (https://davids-neighbour.com)",
@@ -22,9 +22,9 @@
     "eslint-plugin-security": "3.0.1"
   },
   "devDependencies": {
-    "@types/eslint__js": "9.14.0",
     "@types/eslint-plugin-markdown": "2.0.2",
-    "@types/eslint-plugin-security": "3.0.0"
+    "@types/eslint-plugin-security": "3.0.0",
+    "@types/eslint__js": "9.14.0"
   },
   "scripts": {
     "eslint:config": "npx @eslint/config-inspector --config index.js"
