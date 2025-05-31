@@ -5,7 +5,7 @@ export default [
     files: ['**/*.css'],
     language: 'css/css',
     languageOptions: {
-      customSyntax: tailwindSyntax,
+      //customSyntax: tailwindSyntax,
       tolerant: true,
     },
     plugins: {
