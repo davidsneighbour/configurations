@@ -9,7 +9,7 @@
   "homepage": "https://github.com/davidsneighbour/configurations/tree/main/packages/tools",
   "type": "module",
   "dependencies": {
-    "@clack/prompts": "^0.10.1",
+    "@clack/prompts": "^0.11.0",
     "@j9t/obsohtml": "1.8.0",
     "@secretlint/secretlint-rule-no-dotenv": "9.3.4",
     "@secretlint/secretlint-rule-no-homedir": "9.3.4",
