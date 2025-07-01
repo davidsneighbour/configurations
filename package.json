@@ -30,7 +30,7 @@
     "@davidsneighbour/stylelint-config": "file:./packages/stylelint-config",
     "@davidsneighbour/tools": "file:./packages/tools",
     "@davidsneighbour/webpack-config": "file:./packages/webpack-config",
-    "@types/node": "22.15.18",
+    "@types/node": "24.0.8",
     "lerna": "8.2.2"
   },
   "scripts": {
