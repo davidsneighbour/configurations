@@ -13,7 +13,7 @@
     "@j9t/obsohtml": "1.8.0",
     "@secretlint/secretlint-rule-no-dotenv": "9.3.4",
     "@secretlint/secretlint-rule-no-homedir": "9.3.4",
-    "@secretlint/secretlint-rule-no-k8s-kind-secret": "9.3.4",
+    "@secretlint/secretlint-rule-no-k8s-kind-secret": "10.1.1",
     "@secretlint/secretlint-rule-openai": "9.3.4",
     "@secretlint/secretlint-rule-pattern": "9.3.4",
     "@secretlint/secretlint-rule-preset-recommend": "9.3.4",
