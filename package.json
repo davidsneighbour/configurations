@@ -31,7 +31,7 @@
     "@davidsneighbour/tools": "file:./packages/tools",
     "@davidsneighbour/webpack-config": "file:./packages/webpack-config",
     "@types/node": "22.15.18",
-    "lerna": "8.2.2"
+    "lerna": "8.2.3"
   },
   "scripts": {
     "lint": "wireit",
