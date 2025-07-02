@@ -2,8 +2,9 @@
   "cache": true,
   "color": true,
   "install": "prompt",
-  "interactive": false,
+  "interactive": true,
   "upgrade": true,
   "root": true,
-  "deep": true
+  "deep": true,
+  "removeRange": true
 }
