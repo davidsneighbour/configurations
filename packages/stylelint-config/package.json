@@ -10,7 +10,7 @@
   "type": "module",
   "dependencies": {
     "@davidsneighbour/browserslist-config": "^2025.2.4",
-    "stylelint": "16.21.0",
+    "stylelint": "16.21.1",
     "stylelint-config-standard-scss": "15.0.1",
     "stylelint-no-unsupported-browser-features": "8.0.4",
     "stylelint-order": "7.0.0"
