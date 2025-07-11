@@ -16,7 +16,7 @@
     "prettier-plugin-properties": "0.3.0",
     "prettier-plugin-sh": "0.18.0",
     "prettier-plugin-tailwindcss": "0.6.14",
-    "prettier-plugin-toml": "2.0.5"
+    "prettier-plugin-toml": "2.0.6"
   },
   "scripts": {
     "fixpack": "fixpack",
