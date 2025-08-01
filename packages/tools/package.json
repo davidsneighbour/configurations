@@ -18,7 +18,7 @@
     "@secretlint/secretlint-rule-pattern": "10.2.1",
     "@secretlint/secretlint-rule-preset-recommend": "10.2.1",
     "@secretlint/secretlint-rule-secp256k1-privatekey": "10.2.1",
-    "cross-env": "7.0.3",
+    "cross-env": "10.0.0",
     "debug": "4.4.1",
     "deepmerge": "4.3.1",
     "dotenv": "17.2.0",
