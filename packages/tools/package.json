@@ -17,7 +17,7 @@
     "@secretlint/secretlint-rule-openai": "11.0.2",
     "@secretlint/secretlint-rule-pattern": "11.0.2",
     "@secretlint/secretlint-rule-preset-recommend": "11.0.2",
-    "@secretlint/secretlint-rule-secp256k1-privatekey": "11.0.2",
+    "@secretlint/secretlint-rule-secp256k1-privatekey": "11.2.0",
     "cross-env": "10.0.0",
     "debug": "4.4.1",
     "deepmerge": "4.3.1",
