@@ -11,7 +11,7 @@
     "@davidsneighbour/htmlvalidate-config": "^2025.3.2",
     "cypress": "14.5.4",
     "cypress-axe": "1.6.0",
-    "cypress-html-validate": "8.0.0",
+    "cypress-html-validate": "8.1.0",
     "eslint-plugin-cypress": "5.1.1"
   },
   "scripts": {
