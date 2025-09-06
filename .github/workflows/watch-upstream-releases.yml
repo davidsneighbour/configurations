@@ -1,0 +1,218 @@
+name: Watch upstream releases
+
+on:
+  schedule:
+    # Daily at 00:15 UTC (07:15 Asia/Bangkok)
+    - cron: "15 0 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: watch-upstream-releases
+  cancel-in-progress: false
+
+env:
+  # ========= MULTI-REPO CONFIG =========
+  # Provide an array of upstreams to watch. Each entry can customize behavior.
+  # Tip: keep this small and clear; one entry == one dedicated issue when a new release appears.
+  #
+  # Fields:
+  # - repo: "owner/name" (Repo A)
+  # - includePrereleases: "true" | "false"
+  # - labels: comma-separated list (optional)
+  # - assignees: comma-separated list (optional)
+  # - titleTemplate: tokens: {{repo}} {{tag}} {{name}}
+  # - bodyTemplate: tokens: {{repo}} {{tag}} {{name}} {{html_url}} {{published_at}} {{author}} {{release_notes_url}}
+  # - tokenSecretName: secret name that holds a PAT with `repo` scope for private upstreams (optional, default REPO_A_TOKEN)
+  UPSTREAMS_JSON: >
+    [
+      {
+        "repo": "eslint/eslint",
+        "includePrereleases": "false",
+        "labels": "type:dependency",
+        "assignees": "davidsneighbour",
+        "titleTemplate": "{{repo}} {{tag}} released - review and implement",
+        "bodyTemplate": "A new release is available upstream.\n\n* **Repository:** {{repo}}\n* **Version/Tag:** {{tag}}\n* **Name:** {{name}}\n* **Published:** {{published_at}}\n* **Author:** @{{author}}\n* **Release:** {{html_url}}\n\n**Action items**\n* Review changes and assess impact\n* Plan update/implementation work\n* Track tasks and link related PRs here\n\n**Notes**\n* Release notes: {{release_notes_url}}"
+      },
+      {
+        "repo": "biomejs/biome",
+        "includePrereleases": "false",
+        "labels": "type:dependency",
+        "assignees": "davidsneighbour",
+        "titleTemplate": "{{repo}} {{tag}} released - review and implement",
+        "bodyTemplate": "A new release is available upstream.\n\n* **Repository:** {{repo}}\n* **Version/Tag:** {{tag}}\n* **Name:** {{name}}\n* **Published:** {{published_at}}\n* **Author:** @{{author}}\n* **Release:** {{html_url}}\n\n**Action items**\n* Review changes and assess impact\n* Plan update/implementation work\n* Track tasks and link related PRs here\n\n**Notes**\n* Release notes: {{release_notes_url}}"
+      }
+    ]
+
+jobs:
+  check-latest-releases:
+    name: Check upstreams and open issues if new
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout (Repo B)
+        uses: actions/checkout@v4
+
+      - name: Validate configuration
+        run: |
+          set -euo pipefail
+          if [[ -z "${UPSTREAMS_JSON:-}" ]]; then
+            echo "ERROR: UPSTREAMS_JSON is empty."
+            exit 2
+          fi
+          python3 - <<'PY'
+          import json, os, sys
+          data = json.loads(os.environ["UPSTREAMS_JSON"])
+          if not isinstance(data, list) or not data:
+              raise SystemExit("UPSTREAMS_JSON must be a non-empty JSON array")
+          for i, item in enumerate(data):
+              if "repo" not in item or "/" not in item["repo"]:
+                  raise SystemExit(f"Entry {i} invalid or missing 'repo' in OWNER/REPO format")
+          print("UPSTREAMS_JSON validation ok.")
+          PY
+
+      - name: Check all upstreams
+        id: check
+        uses: actions/github-script@v7
+        with:
+          script: |
+            /**
+            * Small helpers
+            */
+            function tpl(str, map) {
+              return String(str || "").replace(/{{\s*([\w]+)\s*}}/g, (_, k) => String(map[k] ?? ""));
+            }
+            function csv(s) {
+              return String(s || "")
+                .split(",")
+                .map(v => v.trim())
+                .filter(Boolean);
+            }
+
+            /**
+            * Call GitHub REST with optional PAT auth (for private upstreams).
+            * If token is falsy, call unauthenticated (works for public repos, lower rate limits).
+            * @param {string} route e.g. 'GET /repos/{owner}/{repo}/releases/latest'
+            * @param {object} params
+            * @param {string|undefined} token
+            */
+            async function api(route, params, token) {
+              const headers = token ? { authorization: `token ${token}` } : {};
+              return github.request(route, { ...params, headers });
+            }
+
+            const upstreams = JSON.parse(process.env.UPSTREAMS_JSON || "[]");
+            const createdIssues = [];
+            const skipped = [];
+
+            const { owner: bOwner, repo: bRepo } = context.repo;
+
+            async function fetchLatestRelease(uOwner, uRepo, includePrereleases, token) {
+              try {
+                if (!includePrereleases) {
+                  const r = await api('GET /repos/{owner}/{repo}/releases/latest', { owner: uOwner, repo: uRepo }, token);
+                  return r.data;
+                }
+                // Include prereleases: list and pick newest non-draft
+                const r = await api('GET /repos/{owner}/{repo}/releases', { owner: uOwner, repo: uRepo, per_page: 10, page: 1 }, token);
+                const rels = (r.data || []).filter(x => !x.draft);
+                if (!rels.length) return null;
+                rels.sort((a, b) => new Date(b.published_at || b.created_at) - new Date(a.published_at || a.created_at));
+                return rels[0];
+              } catch (e) {
+                if (e.status === 404) {
+                  core.warning(`[${uOwner}/${uRepo}] No releases or not accessible (private without token?).`);
+                  return null;
+                }
+                core.setFailed(`[${uOwner}/${uRepo}] Failed to fetch releases: ${e.message}`);
+                throw e;
+              }
+            }
+
+            async function findIssueByExactTitle(owner, repo, title) {
+              for (const state of ["open", "closed"]) {
+                const list = await github.rest.issues.listForRepo({ owner, repo, state, per_page: 100 });
+                const found = (list.data || []).find(i => i.title === title);
+                if (found) return found;
+              }
+              return null;
+            }
+
+            for (const entry of upstreams) {
+              try {
+                const upstreamRepo = String(entry.repo);
+                const [uOwner, uRepo] = upstreamRepo.split("/");
+                const includePrereleases = String(entry.includePrereleases || "false").toLowerCase() === "true";
+                const titleTemplate = entry.titleTemplate || "{{repo}} {{tag}} released - review and implement";
+                const bodyTemplate  = entry.bodyTemplate  || "";
+                const labels    = csv(entry.labels || "");
+                const assignees = csv(entry.assignees || "");
+                const tokenEnv  = entry.tokenSecretName || "REPO_A_TOKEN";
+                const token     = process.env[tokenEnv];
+
+                core.startGroup(`Check ${uOwner}/${uRepo}`);
+
+                const rel = await fetchLatestRelease(uOwner, uRepo, includePrereleases, token);
+                if (!rel) {
+                  core.info(`[${uOwner}/${uRepo}] No eligible release. Skipping.`);
+                  core.endGroup();
+                  skipped.push(upstreamRepo);
+                  continue;
+                }
+
+                const info = {
+                  tag: rel.tag_name || "(no-tag)",
+                  name: rel.name || rel.tag_name || "(no-name)",
+                  html_url: rel.html_url,
+                  published_at: rel.published_at || rel.created_at || "",
+                  repo: `${uOwner}/${uRepo}`,
+                  author: rel.author?.login || "unknown",
+                  release_notes_url: rel.html_url
+                };
+
+                const title = tpl(titleTemplate, info);
+                const body  = tpl(bodyTemplate,  info);
+
+                const existing = await findIssueByExactTitle(bOwner, bRepo, title);
+                if (existing) {
+                  core.info(`[${uOwner}/${uRepo}] Issue exists (#${existing.number}, ${existing.state}).`);
+                  core.endGroup();
+                  continue;
+                }
+
+                const created = await github.rest.issues.create({
+                  owner: bOwner, repo: bRepo,
+                  title, body,
+                  labels: labels.length ? labels : undefined,
+                  assignees: assignees.length ? assignees : undefined
+                });
+
+                core.info(`[${uOwner}/${uRepo}] Created issue #${created.data.number}: ${created.data.html_url}`);
+                core.endGroup();
+                createdIssues.push(created.data.html_url);
+              } catch (e) {
+                core.error(`Fatal while handling upstream '${entry.repo}': ${e.stack || e.message}`);
+                // continue with next upstream
+              }
+            }
+
+            core.summary
+              .addHeading("Upstream release scan")
+              .addList([
+                `Repo B: ${context.repo.owner}/${context.repo.repo}`,
+                `Upstreams configured: ${upstreams.length}`,
+                `New issues created: ${createdIssues.length}`
+              ])
+              .addHeading("Created")
+              .addList(createdIssues.length ? createdIssues : ["(none)"])
+              .addHeading("Skipped / no new release")
+              .addList(skipped.length ? skipped : ["(none)"])
+              .write();
+          #env:
+            # Optional secrets for private upstreams (add more as needed).
+            # Each upstream can reference its own secret via tokenSecretName.
+            #REPO_A_TOKEN: ${{ secrets.REPO_A_TOKEN }}
+            #REPO_B_TOKEN: ${{ secrets.REPO_B_TOKEN }}
