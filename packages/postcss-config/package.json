@@ -12,15 +12,15 @@
     "@davidsneighbour/browserslist-config": "^2025.3.2",
     "@fullhuman/postcss-purgecss": "7.0.2",
     "autoprefixer": "10.4.21",
-    "cssnano": "7.1.0",
+    "cssnano": "7.1.1",
     "doiuse": "6.0.5",
     "pixrem": "5.0.0",
     "postcss": "8.5.6",
     "postcss-cli": "11.0.1",
     "postcss-import": "16.1.1",
-    "postcss-loader": "8.1.1",
+    "postcss-loader": "8.2.0",
     "postcss-nesting": "13.0.2",
-    "postcss-preset-env": "10.2.4"
+    "postcss-preset-env": "10.3.1"
   },
   "scripts": {
     "fixpack": "fixpack",
