@@ -35,7 +35,7 @@
   },
   "scripts": {
     "lint": "wireit",
-    "release": "lerna publish --no-private --no-changelog --message \"chore(release): publish %s\" --signoff-git-commit --sign-git-commit --sign-git-tag & node ./scripts/update-citation.ts --version-source date",
+    "release": "lerna publish --no-private --no-changelog --message \"chore(release): publish releases\" --signoff-git-commit --sign-git-commit --sign-git-tag & node ./scripts/update-citation.ts --version-source date",
     "release:force": "lerna publish --no-private --no-changelog --force-publish --message \"chore(release): publish %s\" --signoff-git-commit --sign-git-commit --sign-git-tag",
     "update": "wireit"
   },
