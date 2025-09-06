@@ -5,6 +5,6 @@ authors:
     given-names: "Patrick"
     orcid: "https://orcid.org/0000-0001-6250-2135"
 title: "Configurations"
-version: 2024.0.0
-date-released: 2024-04-07
+version: v0.0.0
+date-released: 2025-09-06
 url: "https://github.com/davidsneighbour/configurations"
