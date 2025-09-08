@@ -1,4 +1,4 @@
-name: 🏷️ Publish NPM Latest
+name: publish npm packages
 
 on: workflow_dispatch
 
@@ -29,38 +29,38 @@ jobs:
           registry-url: 'https://registry.npmjs.org/'
           node-version: 20
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
-          run_install: false
+      # - name: Install pnpm
+      #   uses: pnpm/action-setup@v2
+      #   with:
+      #     version: 8
+      #     run_install: false
 
-      - name: Get pnpm store directory
-        run: echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+      # - name: Get pnpm store directory
+      #   run: echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
-      - name: Setup pnpm cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+      # - name: Setup pnpm cache
+      #   uses: actions/cache@v3
+      #   with:
+      #     path: ${{ env.STORE_PATH }}
+      #     key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-pnpm-store-
 
-      - name: Run pnpm install dependencies
-        run: pnpm install
+      - name: Run npm install dependencies
+        run: npm install
 
-      - name: Run all workspace TSC builds
-        run: pnpm build:full
+      # - name: Run all workspace TSC builds
+      #   run: npm build:full
 
-      - name: Lerna Version 🏷️
+      - name: Lerna Version
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "users.noreply.github.com"
-          pnpm whoami
-          pnpm run ci:version
+          npm whoami
+          npm run ci:version
 
       # - name: OTP
       #   uses: step-security/wait-for-secrets@v1
@@ -71,9 +71,9 @@ jobs:
       #         name: 'OTP to publish package'
       #         description: 'OTP from authenticator app'
 
-      - name: Lerna Publish 📦
+      - name: Lerna Publish
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          pnpm run ci:publish --otp ${{ steps.wait-for-secrets.outputs.OTP }}
+          npm run ci:publish
