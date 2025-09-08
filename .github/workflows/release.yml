@@ -17,7 +17,7 @@ jobs:
           fetch-depth: 3
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - if: ${{ github.event.pull_request.merged != true && contains('["user1", "user2"]', github.actor) != true }}
+      - if: ${{ github.event.pull_request.merged != true && contains('["davidsneighbour"]', github.actor) != true }}
         name: Ensure current actor is allowed to run the workflow
         run: |
           echo "Error: Your GitHub username (${{ github.actor }}) is not on the allowed list of admins for this workflow"
