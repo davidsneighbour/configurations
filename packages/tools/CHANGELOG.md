@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2025.3.6 (2025-09-08)
+
+**Note:** Version bump only for package @davidsneighbour/tools
+
+
+
+
+
 # [2025.3.0](https://github.com/davidsneighbour/configurations/compare/@davidsneighbour/tools@4.0.10...@davidsneighbour/tools@2025.3.0) (2025-07-15)
 
 

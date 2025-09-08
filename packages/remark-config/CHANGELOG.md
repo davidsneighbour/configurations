@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2025.3.2 (2025-09-08)
+
+**Note:** Version bump only for package @davidsneighbour/remark-config
+
+
+
+
+
 # [2025.3.0](https://github.com/davidsneighbour/configurations/compare/@davidsneighbour/remark-config@4.1.1...@davidsneighbour/remark-config@2025.3.0) (2025-07-15)
 
 
