@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2025.3.5 (2025-09-08)
+
+**Note:** Version bump only for package @davidsneighbour/webpack-config
+
+
+
+
+
 # [2025.3.0](https://github.com/davidsneighbour/configurations/compare/@davidsneighbour/webpack-config@4.0.9...@davidsneighbour/webpack-config@2025.3.0) (2025-07-15)
 
 
