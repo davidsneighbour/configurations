@@ -8,13 +8,13 @@
   "bugs": "https://github.com/davidsneighbour/configurations/issues",
   "homepage": "https://github.com/davidsneighbour/configurations/tree/main/packages/browserslist-config",
   "dependencies": {
-    "browserslist": "4.25.4"
+    "browserslist": "4.26.3"
   },
   "scripts": {
     "fixpack": "fixpack",
     "update": "npm-check-updates -u && npm install && git add package* && fixpack && git commit -m \"chore(deps): update dependencies\""
   },
-  "main": "index.cjs",
+  "main": "index.js",
   "engines": {
     "node": ">=20.18.0",
     "npm": ">=10.3.0"
