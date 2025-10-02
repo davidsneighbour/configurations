@@ -20,9 +20,9 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=20.18.0",
-    "npm": ">=10.3.0"
+    "node": "^24||^26",
+    "npm": ">=11.6.0"
   },
-  "gitHead": "515736c9b5186fe57ad4e73dbbf6915b76641277",
+  "gitHead": "9c121b601e22c6331d9710107386302cab8a4ce4",
   "type": "module"
 }
