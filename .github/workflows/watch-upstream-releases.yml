@@ -54,7 +54,7 @@ jobs:
 
     steps:
       - name: Checkout (Repo B)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Validate configuration
         run: |
