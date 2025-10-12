@@ -56,8 +56,9 @@ jobs:
           GIT_AUTHOR_EMAIL: ${{ github.actor }}@users.noreply.github.com
           GIT_COMMITTER_NAME: ${{ github.actor }}
           GIT_COMMITTER_EMAIL: ${{ github.actor }}@users.noreply.github.com
+          LERNA_YES: "true"
         run: |
           set -euo pipefail
           npm whoami || { echo "npm auth failed"; exit 1; }
           # Single pipeline step (your script):
-          npm run release
+          npm run release -- --yes
