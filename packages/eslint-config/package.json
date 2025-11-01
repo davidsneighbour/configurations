@@ -14,7 +14,7 @@
     "@eslint/json": "0.13.2",
     "@eslint/markdown": "7.3.0",
     "@html-eslint/eslint-plugin": "0.47.0",
-    "@stylistic/eslint-plugin": "5.4.0",
+    "@stylistic/eslint-plugin": "5.5.0",
     "@stylistic/eslint-plugin-js": "4.4.1",
     "@typescript-eslint/parser": "8.46.0",
     "eslint": "9.36.0",
