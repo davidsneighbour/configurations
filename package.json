@@ -35,8 +35,8 @@
   },
   "scripts": {
     "lint": "wireit",
-    "release": "node ./scripts/update-citation.ts --version-source date --no-commit && git add CITATION.cff && lerna publish --no-private --no-changelog --message \"chore(release): publish %s\" --signoff-git-commit --yes",
-    "release:force": "node ./scripts/update-citation.ts --version-source date --no-commit && git add CITATION.cff && lerna publish --no-private --no-changelog --force-publish --message \"chore(release): publish %s\" --signoff-git-commit --yes",
+    "release": "node ./scripts/update-citation.ts --version-source date --no-commit && git add CITATION.cff && git commit -m \"chore: update citation file\" && lerna publish --no-private --no-changelog --message \"chore(release): publish %s\" --signoff-git-commit --yes",
+    "release:force": "node ./scripts/update-citation.ts --version-source date --no-commit && git add CITATION.cff && git commit -m \"chore: update citation file\" && lerna publish --no-private --no-changelog --force-publish --message \"chore(release): publish %s\" --signoff-git-commit --yes",
     "update": "wireit",
 
     "ci:version": "lerna version --yes",
