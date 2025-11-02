@@ -31,6 +31,12 @@ jobs:
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git config --global format.signoff true
 
+      - name: Disable GPG signing in CI
+        run: |
+          set -euo pipefail
+          git config --global commit.gpgsign false
+          git config --global tag.gpgsign false
+
       # Optional: simple actor allow-list (you can expand the list)
       - name: Ensure current actor is allowed
         if: ${{ !contains('["davidsneighbour"]', github.actor) }}
@@ -67,5 +73,4 @@ jobs:
         run: |
           set -euo pipefail
           npm whoami || { echo "npm auth failed"; exit 1; }
-          # Single pipeline step (your script):
           npm run release
