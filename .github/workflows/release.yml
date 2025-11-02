@@ -61,4 +61,4 @@ jobs:
           set -euo pipefail
           npm whoami || { echo "npm auth failed"; exit 1; }
           # Single pipeline step (your script):
-          npm run release -- --yes
+          npm run release
