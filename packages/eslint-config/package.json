@@ -9,15 +9,15 @@
   "homepage": "https://github.com/davidsneighbour/configurations/tree/main/packages/eslint-config",
   "type": "module",
   "dependencies": {
-    "@eslint/css": "0.14.0",
-    "@eslint/js": "9.39.0",
-    "@eslint/json": "0.13.2",
-    "@eslint/markdown": "7.5.0",
-    "@html-eslint/eslint-plugin": "0.47.0",
+    "@eslint/css": "0.14.1",
+    "@eslint/js": "9.39.1",
+    "@eslint/json": "0.14.0",
+    "@eslint/markdown": "7.5.1",
+    "@html-eslint/eslint-plugin": "0.47.1",
     "@stylistic/eslint-plugin": "5.5.0",
     "@stylistic/eslint-plugin-js": "4.4.1",
-    "@typescript-eslint/parser": "8.46.2",
-    "eslint": "9.39.0",
+    "@typescript-eslint/parser": "8.46.3",
+    "eslint": "9.39.1",
     "eslint-plugin-security": "3.0.1"
   },
   "devDependencies": {
