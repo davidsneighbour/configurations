@@ -10,7 +10,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "@typescript-eslint/parser": "8.46.4"
+    "@typescript-eslint/parser": "8.48.1"
   },
   "devDependencies": {
     "@davidsneighbour/babel-config": "file:./packages/babel-config",
