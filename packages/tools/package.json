@@ -10,7 +10,7 @@
   "type": "module",
   "dependencies": {
     "@clack/prompts": "^0.11.0",
-    "@j9t/obsohtml": "1.9.3",
+    "@j9t/obsohtml": "1.9.5",
     "@secretlint/secretlint-rule-no-dotenv": "11.2.5",
     "@secretlint/secretlint-rule-no-homedir": "11.2.5",
     "@secretlint/secretlint-rule-no-k8s-kind-secret": "11.2.5",
