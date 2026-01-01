@@ -8,7 +8,7 @@
   "bugs": "https://github.com/davidsneighbour/configurations/issues",
   "homepage": "https://github.com/davidsneighbour/configurations/tree/main/packages/commitlint-config",
   "dependencies": {
-    "@commitlint/cli": "20.1.0",
+    "@commitlint/cli": "20.3.0",
     "@commitlint/config-conventional": "20.0.0"
   },
   "scripts": {
