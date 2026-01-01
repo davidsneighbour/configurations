@@ -9,7 +9,7 @@
   "homepage": "https://github.com/davidsneighbour/configurations/tree/main/packages/cypress-config",
   "dependencies": {
     "@davidsneighbour/htmlvalidate-config": "^2025.3.6",
-    "cypress": "15.6.0",
+    "cypress": "15.8.1",
     "cypress-axe": "1.7.0",
     "cypress-html-validate": "8.1.0",
     "eslint-plugin-cypress": "5.2.0"
