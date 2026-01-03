@@ -10,15 +10,15 @@
   "type": "module",
   "dependencies": {
     "css-loader": "7.1.2",
-    "html-webpack-plugin": "5.6.4",
+    "html-webpack-plugin": "5.6.5",
     "mini-css-extract-plugin": "2.9.4",
     "postcss-loader": "8.2.0",
     "sass-loader": "16.0.6",
     "style-loader": "4.0.0",
-    "terser-webpack-plugin": "5.3.14",
+    "terser-webpack-plugin": "5.3.16",
     "ts-loader": "9.5.4",
     "typescript": "5.9.3",
-    "webpack": "5.102.1",
+    "webpack": "5.104.1",
     "webpack-cli": "6.0.1",
     "webpack-merge": "6.0.1"
   },
