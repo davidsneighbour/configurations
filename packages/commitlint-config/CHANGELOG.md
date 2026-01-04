@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2026.0.0](https://github.com/davidsneighbour/configurations/compare/@davidsneighbour/commitlint-config@2025.3.5...@davidsneighbour/commitlint-config@2026.0.0) (2026-01-04)
+
+**Note:** Version bump only for package @davidsneighbour/commitlint-config
+
+
+
+
+
 ## 2025.3.2 (2025-09-08)
 
 **Note:** Version bump only for package @davidsneighbour/commitlint-config

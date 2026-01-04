@@ -1,7 +1,7 @@
 {
   "name": "@davidsneighbour/prettier-config",
   "description": "Prettier configuration for use in @davidsneighbour projects.",
-  "version": "2025.3.7",
+  "version": "2026.0.0",
   "license": "MIT",
   "repository": "davidsneighbour/configurations",
   "author": "Patrick Kollitsch <davidsneighbourdev+gh@gmail.com> (https://davids-neighbour.com)",
