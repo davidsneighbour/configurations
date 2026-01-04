@@ -4,26 +4,10 @@
 
 ## Release management
 
-### Regular release
+Release is done via [trusted publishing](https://docs.npmjs.com/trusted-publishers).
 
-Release all packages that changed since the last release. 
+* (once every three months) [create token on npmjs.org](https://www.npmjs.com/settings/davidsneighbour/tokens/)
+* (once every three months) [add/update token on the repositories action secrets and variables settings](https://github.com/davidsneighbour/configurations/settings/secrets/actions)
+* release by manually running the [release.yml workflow](https://github.com/davidsneighbour/configurations/actions/workflows/release.yml)
 
-```bash
-npm run release
-```
-
-### Forced release
-
-Release all packages with their next version increment, even if no changes were made. This will release either patch or minor versions, depending on the changes in the packages.
-
-```bash
-npm run release:force
-```
-
-### Major release
-
-Release all packages with a new major version (yearly update).
-
-```bash
-lerna publish major --force-publish
-```
+The release version number is defined by semantic commit messages.
