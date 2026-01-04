@@ -1,14 +1,14 @@
 {
   "name": "@davidsneighbour/cypress-config",
   "description": "Cypress configuration for use in @davidsneighbour projects.",
-  "version": "2025.3.8",
+  "version": "2025.3.9",
   "license": "MIT",
   "repository": "davidsneighbour/configurations",
   "author": "Patrick Kollitsch <davidsneighbourdev+gh@gmail.com> (https://davids-neighbour.com)",
   "bugs": "https://github.com/davidsneighbour/configurations/issues",
   "homepage": "https://github.com/davidsneighbour/configurations/tree/main/packages/cypress-config",
   "dependencies": {
-    "@davidsneighbour/htmlvalidate-config": "^2025.3.6",
+    "@davidsneighbour/htmlvalidate-config": "^2025.3.7",
     "cypress": "15.8.1",
     "cypress-axe": "1.7.0",
     "cypress-html-validate": "8.1.0",
