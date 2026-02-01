@@ -31,7 +31,7 @@
     "npm-run-all2": "8.0.4",
     "npm-watch": "0.13.0",
     "rimraf": "6.1.2",
-    "secretlint": "11.3.0",
+    "secretlint": "11.3.1",
     "semver": "7.7.3",
     "wireit": "0.14.12"
   },
