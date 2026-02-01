@@ -10,7 +10,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "@typescript-eslint/parser": "8.51.0"
+    "@typescript-eslint/parser": "8.54.0"
   },
   "devDependencies": {
     "@davidsneighbour/babel-config": "file:./packages/babel-config",
@@ -30,17 +30,16 @@
     "@davidsneighbour/stylelint-config": "file:./packages/stylelint-config",
     "@davidsneighbour/tools": "file:./packages/tools",
     "@davidsneighbour/webpack-config": "file:./packages/webpack-config",
-    "@types/node": "25.0.3",
+    "@types/node": "25.1.0",
     "lerna": "9.0.3"
   },
   "scripts": {
+    "ci:publish": "lerna publish from-package --force-publish --yes",
+    "ci:version": "lerna version --yes",
     "lint": "wireit",
     "release": "node ./scripts/update-citation.ts --version-source date --no-commit && git add CITATION.cff && git commit -m \"chore: update citation file\" && lerna publish --no-private --no-changelog --message \"chore(release): publish %s\" --signoff-git-commit --yes",
     "release:force": "node ./scripts/update-citation.ts --version-source date --no-commit && git add CITATION.cff && git commit -m \"chore: update citation file\" && lerna publish --no-private --no-changelog --force-publish --message \"chore(release): publish %s\" --signoff-git-commit --yes",
-    "update": "wireit",
-
-    "ci:version": "lerna version --yes",
-    "ci:publish": "lerna publish from-package --force-publish --yes"
+    "update": "wireit"
   },
   "wireit": {
     "update": {

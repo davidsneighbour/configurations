@@ -10,8 +10,8 @@
   "type": "module",
   "dependencies": {
     "@davidsneighbour/browserslist-config": "^2026.0.0",
-    "@fullhuman/postcss-purgecss": "7.0.2",
-    "autoprefixer": "10.4.23",
+    "@fullhuman/postcss-purgecss": "8.0.0",
+    "autoprefixer": "10.4.24",
     "cssnano": "7.1.2",
     "doiuse": "6.0.6",
     "pixrem": "5.0.0",
@@ -19,8 +19,8 @@
     "postcss-cli": "11.0.1",
     "postcss-import": "16.1.1",
     "postcss-loader": "8.2.0",
-    "postcss-nesting": "13.0.2",
-    "postcss-preset-env": "10.6.0"
+    "postcss-nesting": "14.0.0",
+    "postcss-preset-env": "11.1.2"
   },
   "scripts": {
     "fixpack": "fixpack",

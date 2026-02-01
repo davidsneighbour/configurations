@@ -8,8 +8,8 @@
   "bugs": "https://github.com/davidsneighbour/configurations/issues",
   "homepage": "https://github.com/davidsneighbour/configurations/tree/main/packages/htmlvalidate-config",
   "dependencies": {
-    "axe-core": "4.11.0",
-    "html-validate": "10.5.0"
+    "axe-core": "4.11.1",
+    "html-validate": "10.7.0"
   },
   "scripts": {
     "fixpack": "fixpack",
