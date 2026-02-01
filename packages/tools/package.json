@@ -12,7 +12,7 @@
     "@clack/prompts": "^0.11.0",
     "@j9t/obsohtml": "1.9.5",
     "@secretlint/secretlint-rule-no-dotenv": "11.3.0",
-    "@secretlint/secretlint-rule-no-homedir": "11.3.0",
+    "@secretlint/secretlint-rule-no-homedir": "11.3.1",
     "@secretlint/secretlint-rule-no-k8s-kind-secret": "11.3.0",
     "@secretlint/secretlint-rule-openai": "11.3.0",
     "@secretlint/secretlint-rule-pattern": "11.3.0",
