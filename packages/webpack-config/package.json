@@ -10,7 +10,7 @@
   "type": "module",
   "dependencies": {
     "css-loader": "7.1.2",
-    "html-webpack-plugin": "5.6.5",
+    "html-webpack-plugin": "5.6.6",
     "mini-css-extract-plugin": "2.9.4",
     "postcss-loader": "8.2.0",
     "sass-loader": "16.0.6",
