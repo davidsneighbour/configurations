@@ -1,7 +1,7 @@
 {
   "name": "@davidsneighbour/postcss-config",
   "description": "PostCSS configuration for use in @davidsneighbour projects.",
-  "version": "2026.0.0",
+  "version": "2026.0.1",
   "license": "MIT",
   "repository": "davidsneighbour/configurations",
   "author": "Patrick Kollitsch <davidsneighbourdev+gh@gmail.com> (https://davids-neighbour.com)",
@@ -9,7 +9,7 @@
   "homepage": "https://github.com/davidsneighbour/configurations/tree/main/packages/postcss-config",
   "type": "module",
   "dependencies": {
-    "@davidsneighbour/browserslist-config": "^2026.0.0",
+    "@davidsneighbour/browserslist-config": "^2026.0.1",
     "@fullhuman/postcss-purgecss": "8.0.0",
     "autoprefixer": "10.4.24",
     "cssnano": "7.1.2",
