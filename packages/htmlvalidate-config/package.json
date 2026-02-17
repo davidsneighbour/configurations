@@ -9,7 +9,7 @@
   "homepage": "https://github.com/davidsneighbour/configurations/tree/main/packages/htmlvalidate-config",
   "dependencies": {
     "axe-core": "4.11.1",
-    "html-validate": "10.7.0"
+    "html-validate": "10.8.0"
   },
   "scripts": {
     "fixpack": "fixpack",
@@ -17,7 +17,7 @@
   },
   "main": "index.cjs",
   "engines": {
-    "node": "^24||^26",
+    "node": "^24||^25||^26",
     "npm": ">=11.6.0"
   },
   "gitHead": "dc297ea4a3914cfb6cdb8fc2dae162a8a28472a6",

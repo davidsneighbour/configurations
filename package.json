@@ -10,7 +10,9 @@
     "packages/*"
   ],
   "dependencies": {
-    "@typescript-eslint/parser": "8.54.0"
+    "@typescript-eslint/parser": "8.56.0",
+    "@types/node": "25.2.3",
+    "lerna": "9.0.4"
   },
   "devDependencies": {
     "@davidsneighbour/babel-config": "file:./packages/babel-config",
@@ -29,9 +31,7 @@
     "@davidsneighbour/remark-config": "file:./packages/remark-config",
     "@davidsneighbour/stylelint-config": "file:./packages/stylelint-config",
     "@davidsneighbour/tools": "file:./packages/tools",
-    "@davidsneighbour/webpack-config": "file:./packages/webpack-config",
-    "@types/node": "25.1.0",
-    "lerna": "9.0.3"
+    "@davidsneighbour/webpack-config": "file:./packages/webpack-config"
   },
   "scripts": {
     "ci:publish": "lerna publish from-package --force-publish --yes",
@@ -79,7 +79,7 @@
     "provenance": true
   },
   "engines": {
-    "node": "^24||^26",
+    "node": "^24||^25||^26",
     "npm": ">=11.6.0"
   }
 }

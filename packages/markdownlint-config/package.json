@@ -9,7 +9,7 @@
   "homepage": "https://github.com/davidsneighbour/configurations/tree/main/packages/markdownlint-config",
   "dependencies": {
     "markdownlint": "0.40.0",
-    "markdownlint-cli2": "0.20.0"
+    "markdownlint-cli2": "0.21.0"
   },
   "scripts": {
     "fixpack": "fixpack",
@@ -17,7 +17,7 @@
   },
   "main": "index.json",
   "engines": {
-    "node": "^24||^26",
+    "node": "^24||^25||^26",
     "npm": ">=11.6.0"
   },
   "gitHead": "dc297ea4a3914cfb6cdb8fc2dae162a8a28472a6",
