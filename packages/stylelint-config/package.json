@@ -1,7 +1,7 @@
 {
   "name": "@davidsneighbour/stylelint-config",
   "description": "Stylelint configuration for use in @davidsneighbour projects.",
-  "version": "2026.0.1",
+  "version": "2026.0.2",
   "license": "MIT",
   "repository": "davidsneighbour/configurations",
   "author": "Patrick Kollitsch <davidsneighbourdev+gh@gmail.com> (https://davids-neighbour.com)",
@@ -9,7 +9,7 @@
   "homepage": "https://github.com/davidsneighbour/configurations/tree/main/packages/stylelint-config",
   "type": "module",
   "dependencies": {
-    "@davidsneighbour/browserslist-config": "^2026.0.1",
+    "@davidsneighbour/browserslist-config": "^2026.0.2",
     "stylelint": "17.3.0",
     "stylelint-config-standard-scss": "17.0.0",
     "stylelint-no-unsupported-browser-features": "8.1.1",
