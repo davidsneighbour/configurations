@@ -32,7 +32,7 @@
     "npm-watch": "0.13.0",
     "rimraf": "6.1.2",
     "secretlint": "11.3.1",
-    "semver": "7.7.3",
+    "semver": "7.7.4",
     "wireit": "0.14.12"
   },
   "scripts": {
