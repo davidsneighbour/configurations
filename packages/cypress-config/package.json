@@ -12,7 +12,7 @@
     "cypress": "15.10.0",
     "cypress-axe": "1.7.0",
     "cypress-html-validate": "8.1.0",
-    "eslint-plugin-cypress": "6.0.0"
+    "eslint-plugin-cypress": "6.1.0"
   },
   "scripts": {
     "fixpack": "fixpack",
