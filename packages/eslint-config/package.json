@@ -13,11 +13,11 @@
     "@eslint/js": "10.0.1",
     "@eslint/json": "1.0.1",
     "@eslint/markdown": "7.5.1",
-    "@html-eslint/eslint-plugin": "0.55.0",
+    "@html-eslint/eslint-plugin": "0.56.0",
     "@stylistic/eslint-plugin": "5.9.0",
     "@stylistic/eslint-plugin-js": "4.4.1",
     "@typescript-eslint/parser": "8.56.0",
-    "eslint": "10.0.0",
+    "eslint": "10.0.1",
     "eslint-plugin-security": "3.0.1"
   },
   "devDependencies": {
