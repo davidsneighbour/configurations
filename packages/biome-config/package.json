@@ -9,7 +9,7 @@
   "homepage": "https://github.com/davidsneighbour/configurations/tree/main/packages/biome-config",
   "type": "module",
   "dependencies": {
-    "@biomejs/biome": "2.4.2"
+    "@biomejs/biome": "2.4.4"
   },
   "scripts": {
     "verify": "npm run verify:biome",
