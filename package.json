@@ -10,9 +10,9 @@
     "packages/*"
   ],
   "dependencies": {
-    "@types/node": "25.3.5",
-    "@typescript-eslint/parser": "8.56.1",
-    "lerna": "9.0.5"
+    "@types/node": "25.4.0",
+    "@typescript-eslint/parser": "8.57.0",
+    "lerna": "9.0.6"
   },
   "devDependencies": {
     "@davidsneighbour/babel-config": "file:./packages/babel-config",
