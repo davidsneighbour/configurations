@@ -12,7 +12,7 @@
   "dependencies": {
     "@types/node": "25.3.5",
     "@typescript-eslint/parser": "8.56.1",
-    "lerna": "9.0.5"
+    "lerna": "9.0.6"
   },
   "devDependencies": {
     "@davidsneighbour/babel-config": "file:./packages/babel-config",
