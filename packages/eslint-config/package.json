@@ -16,7 +16,7 @@
     "@html-eslint/eslint-plugin": "0.59.0",
     "@stylistic/eslint-plugin": "5.10.0",
     "@stylistic/eslint-plugin-js": "4.4.1",
-    "@typescript-eslint/parser": "8.58.1",
+    "@typescript-eslint/parser": "8.58.2",
     "eslint": "10.2.0",
     "eslint-plugin-security": "4.0.0"
   },
