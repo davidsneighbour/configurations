@@ -11,7 +11,7 @@
   ],
   "dependencies": {
     "@types/node": "25.5.0",
-    "@typescript-eslint/parser": "8.58.0",
+    "@typescript-eslint/parser": "8.59.1",
     "lerna": "9.0.7"
   },
   "devDependencies": {
