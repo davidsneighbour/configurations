@@ -12,7 +12,7 @@
     "@davidsneighbour/browserslist-config": "^2026.0.3",
     "@fullhuman/postcss-purgecss": "8.0.0",
     "autoprefixer": "10.5.0",
-    "cssnano": "7.1.7",
+    "cssnano": "7.1.9",
     "doiuse": "6.0.6",
     "pixrem": "5.0.0",
     "postcss": "8.5.13",
