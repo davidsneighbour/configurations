@@ -16,7 +16,7 @@
     "@secretlint/secretlint-rule-no-k8s-kind-secret": "12.3.1",
     "@secretlint/secretlint-rule-openai": "12.3.1",
     "@secretlint/secretlint-rule-pattern": "12.3.1",
-    "@secretlint/secretlint-rule-preset-recommend": "12.3.1",
+    "@secretlint/secretlint-rule-preset-recommend": "13.0.2",
     "@secretlint/secretlint-rule-secp256k1-privatekey": "12.3.1",
     "cross-env": "10.1.0",
     "debug": "4.4.3",
