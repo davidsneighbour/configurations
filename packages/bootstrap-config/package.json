@@ -9,7 +9,7 @@
   "homepage": "https://github.com/davidsneighbour/configurations/tree/main/packages/bootstrap-config",
   "dependencies": {
     "@popperjs/core": "2.11.8",
-    "@types/bootstrap": "5.2.10",
+    "@types/bootstrap": "5.2.11",
     "bootstrap": "5.3.8"
   },
   "scripts": {
