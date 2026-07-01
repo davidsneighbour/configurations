@@ -10,7 +10,7 @@
     "packages/*"
   ],
   "dependencies": {
-    "@types/node": "25.9.1",
+    "@types/node": "26.1.0",
     "@typescript-eslint/parser": "8.60.1",
     "lerna": "9.0.7"
   },
