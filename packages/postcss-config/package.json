@@ -11,16 +11,16 @@
   "dependencies": {
     "@davidsneighbour/browserslist-config": "^2026.0.3",
     "@fullhuman/postcss-purgecss": "8.0.0",
-    "autoprefixer": "10.5.0",
-    "cssnano": "8.0.1",
+    "autoprefixer": "10.5.2",
+    "cssnano": "8.0.2",
     "doiuse": "6.0.6",
     "pixrem": "5.0.0",
-    "postcss": "8.5.15",
+    "postcss": "8.5.16",
     "postcss-cli": "11.0.1",
     "postcss-import": "16.1.1",
     "postcss-loader": "8.2.1",
     "postcss-nesting": "14.0.0",
-    "postcss-preset-env": "^11.3.0"
+    "postcss-preset-env": "^11.3.2"
   },
   "scripts": {
     "fixpack": "fixpack",
